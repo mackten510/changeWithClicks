@@ -1,0 +1,39 @@
+"<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Toggle Class</title>
+</head>
+<style> 
+
+  .headingNumberOne {
+    color: firebrick;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .headingNumberTwo {
+    color: cornflowerblue;
+    font-size: 4em;
+    cursor: pointer;
+  }
+</style>
+      
+<body>
+  <div id = "main" class = "headingNumberOne">
+      "Hi there!"
+  </div>
+</body>
+<script>
+    const change = document.getElementById("main");
+//Switching back and forth berween two styles with a click
+    change.onclick = () => {
+       if (change.classList.contains('headingNumberOne')) {
+           change.classList.remove('headingNumberOne');
+           change.classList.add('headingNumberTwo');
+       } else {
+            change.classList.remove('headingNumberTwo');
+            change.classList.add('headingNumberOne');
+       };
+    }
+</script>
+</html>
